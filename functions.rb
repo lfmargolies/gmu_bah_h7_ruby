@@ -1,10 +1,8 @@
 # Return a reversed copy of the array
 def reverse(an_array)
+	an_array.reverse
 end
->> anArray = [1, 2, 3, 'yo']
-=> [1, 2, 3, "yo"]
->> anArray.reverse
-=> ["yo", 3, 2, 1]
+
 
 
 
