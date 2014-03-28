@@ -24,7 +24,7 @@ end
 # (Hint: the is_a? or respond_to? methods might be useful here)
 # 
 def sum_only_numbers(an_arrays)
-	an_arrays.select{|x| (x.is_a? Numeric)}
+	an_arrays.select{|x| (x.is_a? Numeric)}.inject{|acc,x| acc+x}
 end
 
 # For i from 1 to 100, return an array.
