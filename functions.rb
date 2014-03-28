@@ -23,7 +23,8 @@ end
 # Be sure to only sum the numbers
 # (Hint: the is_a? or respond_to? methods might be useful here)
 # 
-def sum_only_numbers(an_array)
+def sum_only_numbers(an_arrays)
+	an_arrays.select{|x| (x.is_a? Numeric)}
 end
 
 # For i from 1 to 100, return an array.
