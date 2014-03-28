@@ -10,6 +10,8 @@ end
 # Letters should be lowercase before counting
 # For example, histogram('Hello') returns {'h'=>1,'e'=>1,'l'=>2,'o'=>1}
 def histogram(a_string)
+	aString = a_string.downcase
+	Hash[aString.delete(' ').split('').group_by{ |c| c }.map { |k, v| [k, v.size] }]
 end
 
 
@@ -36,6 +38,6 @@ end
 
 # Uncomment each of these to test your functions
 puts reverse([3,6,'dog']).inspect
-puts histogram('The Quick brown fox').inspect
+puts histogram('The Quick brown foxs').inspect
 puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
 puts fizzbuzz.join("\n")
