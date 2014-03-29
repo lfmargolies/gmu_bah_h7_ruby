@@ -1,21 +1,27 @@
 
 #Create a class named Bookmark with the following:
 
-#●	An initializer that accepts url and title parameters:
-#○	it should set instance variables named url, title
-#○	it should set a read only variable named last_visited
-#●	A method named visit! which sets last_visited to the current time and date (hint: the Time.now method returns an instance of Time)
+#An initializer that accepts url and title parameters:
+#it should set instance variables named url, title
+#it should set a read only variable named last_visited
+#A method named visit! which sets last_visited to the current time and date (hint: the Time.now method returns an instance of Time)
 
 class Bookmark
+	attr_accessor :url, :title
+	attr_reader :last_visited
+
+	def initialize( url, title )
+		@url, @title = url, title
+	end
+		
+	def visit!
+		@last_visited = Time.now
+	end
+
 end
 
-bookmark = Bookmark.new
-#<Bookmark:0x1091a59a0>
-class Bookmark
-def initialize(url, title, last_visited)
-@url = url
-@title = title
-@last_visited = last_visited
-end
-end
-nil
+a_bookmark = Bookmark.new('google.com', 'google')
+puts a_bookmark.url
+puts a_bookmark.title
+puts a_bookmark.visit!
+
