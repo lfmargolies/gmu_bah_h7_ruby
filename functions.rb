@@ -35,6 +35,19 @@ end
 # Otherwise, the element is simply the value of i
 # For example [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', ..., 14, 'FizzBuzz', ...]
 def fizzbuzz
+	array = Array.new
+	for i in (1..100)
+		if i%3 == 0
+			array.push("Fizz")
+		elsif i%5 == 0
+			array.push("Buzz")
+		elsif i%3 == 0 && i%5 == 0
+			array.push("FizzBuzz")
+		else
+		array.push(i)		
+		end	
+	end
+	return array
 end
 
 # Uncomment each of these to test your functions
